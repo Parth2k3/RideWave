@@ -1,0 +1,22 @@
+//frontend
+logo,title and head
+remove or add routes to currently un-used elements on the website
+
+//DATABASE 
+instead of deleting request entry add it to accepted request / request history to show it in another tab on request status also pending requests
+**MAKE a seperate table for username,clusterid,if admin or not to facilitate deletion of user from cluster
+**adminusername and clusterid need to have a relation.
+remove cluster function
+
+//API
+update detailsitem.html to display map route 
+update match function using api to show only those options which are practical
+update recieved request to show:-
+  google map with all locations added including the request
+  how much extra kilometers are added to the ride
+add functionality(a new table or in current schema) to store each users payment based on cost/km and price division based on some function
+
+
+add search feature in map
+
+view location shows current cluster location of user not the request sent

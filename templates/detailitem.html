@@ -1,0 +1,59 @@
+<div class="border-bottom row" style="margin-bottom:16px;padding-bottom:8px;padding-left:100px">
+  <div class="col-10" style="border:5px solid black;border-radius:10px; padding:20px; overflow:hidden; margin:10px;width:90%" >
+    <h2 
+      style="color:rgb(120,120,120); margin-bottom:4px;">
+      {{details['adminusername']}}
+    </h2><br><br>
+    <div>
+      <b style="font-size:15px">Leaving Date: </b> {{details['leavedate']}}
+      <b style="font-size:15px">Leaving Time: </b> {{details['leavingtime']}}
+    </div>
+    <div>
+      <b style="font-size:15px">Car Name : </b> {{details['carName']}}
+    </div>
+    <div>
+      <b style="font-size:15px">Car No. : </b> {{details['carNo']}}
+    </div>
+    <div>
+      <b style="font-size:15px">Cost : </b> {{details['cost']}}
+    </div>
+    <div>
+      <b style="font-size:15px">Route:-</b> 
+      <div style="display:block">
+  <iframe src="https://www.google.com/maps/embed/v1/directions?origin={{details['initiallocationx']}},{{details['initiallocationy']}}&destination={{details['finallocationx']}},{{details['finallocationy']}}&waypoints={{waypoints}}&key={{key}}" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+  </div>
+  <div>
+      <b style="font-size:15px">Better Route:-</b> 
+      <a style="color:white;background-color:black; border-radius:5px;padding-left:5px;padding-right:5px;padding-top:3px;padding-bottom:4px;margin:5px" href="/user/{{username}}/clusters/{{clusters}}/map">map</a>
+  </div>
+    <div>
+      <b style="font-size:15px">No. of Passengers : </b> {{details['noofpassengers']}}
+      <div>
+      <b style="font-size:15px">Passengers:</b>
+      <div>
+      {%for row in passengers%}
+          <div>
+            <div>
+            <b style="font-size:15px">Name :
+            {{row['username']}}
+            </div>
+            <div>
+            <b style="font-size:15px">Contact</b> :
+              <div>
+                <b style="font-size:15px">Phone</b> :{{row['PhoneNo.']}}
+              </div>
+              <div>
+                <b style="font-size:15px">Email</b> :{{row['EmailID']}}
+              </div>
+              </div>
+            {% if username == details['adminusername'] %}
+            <a style="color:white;background-color:orangered; border-radius:5px;padding-left:5px;padding-right:5px;padding-top:3px;padding-bottom:4px;margin:5px" href="/user/{{username}}/clusters/{{clusters}}/remove/{{row['username']}}">Remove</a>
+    {% endif %}
+          </div>
+      {%endfor%}
+      </div>   
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<title></title>
+	
+	<style>
+    
+    :root{
+	--yellow:#EBB14D;
+	--darkblue:#3A3C6C;
+	--light:#cfd8ef;
+	--white:#fff;
+}
+.dropbtn {
+  background-color: #3A3C6C;
+  color: white;
+  border: 2px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+    border-radius: 50%;
+}
+.dropbtn > img{
+    height: 48px;
+    width: 48px;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+    
+*{margin: 0px; padding: 0px; font-family: system-ui;}
+.clearfix{clear: both;}
+header{padding: 10px 0px 0px 0px;}
+.container{width: 1200px; max-width: 100%; margin: 0 auto;}
+.col2{width: 20%;float: left;}
+.col3{width: 25%; float: left;}
+.col4{width: 33.3%;float: left;}
+.col6{width: 50%; float: left;}
+.input-box{display: inline-block;padding: 10px 18px;border: 1px solid #ddd;
+	margin-left:60px; width: 300px;}
+.input-box input{border: none; padding-left: 15px;outline: none;width: 82%; }
+.logo{display: block;float: left;}
+.s-btn{height: 45px;width: 52px;margin: -11px;background: var(--darkblue);
+    color: white; border: none; margin-right: -20px; cursor: pointer;
+}
+.s-btn:hover{background: var(--yellow); color: var(--darkblue);}
+.topnav li{list-style: none; float: left; padding:15px 20px;}
+.topnav li a{text-decoration: none; color: var(--darkblue);}
+.btn-r{padding: 11px 25px;
+    background: var(--darkblue);
+    color: white;
+    border: none;
+    margin-top: -16px;
+    font-size: 15px;
+    cursor: pointer;
+}
+.btn-r:hover{background: var(--yellow); color: var(--darkblue);}
+.topnav{float: right;}
+.topnav li a:hover{
+	color: var(--yellow);
+}
+.header-bottom{background: var(--darkblue);}
+.bottomnav li{list-style: none; float: left; padding: 13px 30px;}
+.bottomnav li a{text-decoration: none; color:var(--white); font-weight: 200;}
+.active{background:var(--yellow);}
+.active a{color: var(--darkblue)!important;}
+.b-btn{    
+	padding: 13px 25px;
+    background: var(--yellow);
+    color: white;
+    border: none;
+    font-size: 16px;
+    float: right;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.taxi-img{width: 100%;}
+.sec-1{ padding: 50px 0px 0px 0px;  height: 280px;
+ background: linear-gradient(var(--light), #fff);}
+.heading{font-size: 50px; color: var(--darkblue);}
+.sec-2{margin-top: 3%; padding: 100px 0px;}
+.heading-2{color: var(--darkblue); text-align: center;}
+.border{text-align: center; margin-bottom: 50px;}
+.box{width: 200px; text-align: center;}
+.sec-4{padding: 100px 0px;}
+.box h3{font-size: 15px; color: var(--darkblue); margin:15px 0px; font-weight: 500; }
+.box p{font-size: 13px; letter-spacing: 1px; line-height: 20px;}
+.icon-1{font-size: 30px;background: #ecb34c;border-radius: 33px;
+    color: #3a3c6c;
+	height: 60px;
+    width: 60px;
+    line-height: 60px;
+}
+.heading-3{color: var(--darkblue); }
+.p3{font-size: 13px; letter-spacing: 1px; line-height: 20px; width: 500px;}
+.p5{font-size: 13px; letter-spacing: 1px; line-height: 20px; color: var(--white);}
+.p5:after{
+	content: '';
+	position: absolute;
+	top: 75%;
+	right: 5%;
+	width: 50px;
+	height: 50px;
+	background: url(../image/quote.png);
+	background-size: 50px;
+	transform: rotateZ(184deg);
+}
+.content{float: left;padding: 41px;}
+.sec-5{background: var(--darkblue); padding: 100px 0px; position: relative; 
+	height: 150px; margin-top: -100px;}
+.footer-distributed {
+  background-color: var(--darkblue);
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: normal 16px sans-serif;
+  padding: 45px 50px;
+}
+.footer-distributed .footer-left p {color: var(--white);font-size: 14px;margin: 0;}
+.footer-distributed p.footer-links {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0 0 10px;
+  padding: 0;
+  transition: ease .25s;
+}
+.footer-distributed p.footer-links a {
+  display: inline-block;
+  line-height: 1.8;
+  text-decoration: none;
+  color: inherit;
+  transition: ease .25s;
+}
+.footer-distributed .footer-links a:before {
+  content: "/";
+  font-size: 10px;
+  left: 0;
+  color: #fff;
+  display: inline-block;
+  padding-right: 5px;
+}
+.footer-distributed .footer-links .link-1:before {content: none;}
+.footer-distributed .footer-right {float: right;margin-top: 6px;max-width: 180px;}
+.footer-distributed .footer-right a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background-color: var(--yellow);
+  border-radius: 2px;
+  font-size: 20px;
+  color: var(--darkblue);
+  text-align: center;
+  line-height: 35px;
+  margin-left: 3px;
+  transition:all .25s;
+}
+.footer-distributed .footer-right a:hover{transform:scale(1.1);}
+.footer-distributed p.footer-links a:hover{text-decoration:underline;}
+  </style>
+</head>
+<body>
+
+<header>
+	<div class="container">
+		<div class="col6">
+			<img style="width:75px;height:75px" src="/static/cab.jpg" class="logo">
+       <h2 style="margin:25px">RideWave</h2>
+		</div>
+    
+		<div class="col6">
+			<ul class="topnav">
+		
+				
+				
+				
+				<li><div class="dropdown">
+  <button  class="dropbtn"><img src="/static/pfp.jpg" alt="pfp"></button>
+  <div class="dropdown-content">
+    <a href="">{{username}}</a>
+    <a href="/help">Help</a>
+    <a href="/logout">Log Out</a>
+  </div>
+</div></li>
+			</ul>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+
+	<div class="header-bottom">
+		<div class="container">
+			<ul class="bottomnav">
+				<li class="active"><a href="#"><i class="fa fa-home"></i>  Home</a></li>
+				<li><a href="/user/{{username}}/clusters"><i class="fa fa-exclamation-circle"></i>  Your Clusters</a></li>
+				<li><a href="/user/{{username}}/requests"><i class="fa fa-gear"></i> Recieved Requests</a></li>
+				<li><a href="/user/{{username}}/request_status"><i class="fa fa-taxi"></i>  Request Status</a></li>
+
+				<li><a href="#"><i class="fa fa-map-marker"></i>  Contact</a></li>
+			</ul>
+			<button class="b-btn">Become a Driver</button>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+</header>
+
+
+<section class="sec-1">
+	<div class="container">
+		<div class="col6">
+			<h1 class="heading">Earn. Connect.<br>Contribute to<br>Society</h1>
+			<p>Partner with us to drive your own livelihood and more.</p>
+			<br>
+			<a class="btn-r" href = '/user/{{username}}/driver_form'>Drive</a>
+      <a class="btn-r" href = '/user/{{username}}/rider_form'>Ride</a>
+		</div>
+		<div class="col6">
+			<img src="/static/zoom.jpg" class="taxi-img">
+		</div>
+		<div class="clearfix"></div>
+	</div>
+</section>
+
+
+
+<section class="map">
+	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d447986.853145337!2d76.81114849633596!3d28.692718881263545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d047309fff32f%3A0xfc5606ed1b5d46c3!2sDelhi!5e0!3m2!1sen!2sin!4v1646818342543!5m2!1sen!2sin" width="100%" height="450" style="border:15px; margin:15px;" allowfullscreen="" loading="lazy"></iframe>
+</section>
+
+<footer class="footer-distributed">
+
+<div class="footer-right">
+
+<a href="#"><i class="fa fa-facebook"></i></a>
+<a href="#"><i class="fa fa-twitter"></i></a>
+<a href="#"><i class="fa fa-linkedin"></i></a>
+<a href="#"><i class="fa fa-github"></i></a>
+
+</div>
+ 
+<div class="footer-left">
+<p class="footer-links">
+<a class="link-1" href="#">Home</a>
+<a href="#">Blog</a>
+<a href="#">Pricing</a>
+<a href="#">About</a>
+<a href="#">Faq</a>
+<a href="#">Contact</a>
+</p>
+<p>Carpool © 2015</p>
+</div>
+
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+
+<script type="text/javascript">
+	$('.bottomnav li').click(function(){
+    $('.bottomnav li').removeClass("active");
+    $(this).addClass("active");
+});
+
+	
+</script>
+</body>
+</html>

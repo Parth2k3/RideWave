@@ -1,0 +1,37 @@
+<div class="border-bottom row" style="margin-bottom:16px;padding-bottom:8px;padding-left:100px">
+  <div class="col-10">
+    <h4 
+      style="color:rgb(120,120,120); margin-bottom:4px;">
+      <b>Username:</b>{{request['username']}} 
+      <div>
+      <b>Requesting to enter:</b>
+        <div>
+          {{request['clusterid']}}
+        </div>
+
+    </h4>
+  </div>
+  <div class="col-2 padding-right:16px">
+    <a href="/processing/1/{{username}}/{{request['requestid']}}" type="button" class="btn btn-outline-primary float-right align-middle" >Accept</a>
+    <a href="/processing/0/{{username}}/{{request['requestid']}}" type="button" class="btn btn-outline-primary float-right align-right" >Reject</a>
+    <button onclick="TestsFunction({{request['requestid']}})" class="btn btn-outline-primary float-right align-right" >View Location</button>
+  </div>
+  <div id="maps{{request['requestid']}}" style="display:none">
+  <iframe src="https://www.google.com/maps/embed/v1/place?q={{request['latitude']}},{{request['longitude']}}&zoom=17&key={{key}}" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+  </div>
+
+  
+</div>
+<script>
+  
+  function TestsFunction(id) {
+    var T = document.getElementById("maps".concat(id));
+    if(T.style.display != "block"){
+      T.style.display = "block";
+    }
+    else{
+      T.style.display = "none";
+    }
+    
+}
+</script>
